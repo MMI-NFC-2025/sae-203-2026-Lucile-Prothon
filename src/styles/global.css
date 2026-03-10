@@ -1,36 +1,143 @@
 @import "tailwindcss";
+@import '@fontsource-variable/exo';
+@import '@fontsource/monoton';
+
 
 @theme {
-    --color-primary: oklch(0.8897 0.2112 95.02);
-    /* #1d096b */
-    --color-primary-light: oklch(0.9114 0.0437 80.8);
-    /* #feaa9b */
+    /* Font */
+    --font-display: "Monoton";
+    --font-sans: "Exo Variable", sans-serif;
 
-    --font-sans: "Inter Variable", sans-serif;
+    /* Grid */
+    --my-grid: repeat(2, minmax(0, 40px));
 
-    --my-grid: repeat(12, minmax(0, 88px));
+    /* Color */
+    --color-brandingblue: oklch(45.5% 0.3037 264.12deg);
+    --color-darkblue: oklch(27.3% 0.1804 264.05deg);
+    --color-white: oklch(100% 0 0deg);
+    --color-magenta: oklch(65% 0.32 327deg);
+    --color-grey-5: oklch(55.55% 0 0deg);
+    --color-grey-4: oklch(72.7% 0 0deg);
+    --color-grey-3: oklch(86.99% 0 0deg);
+    --color-grey-2: oklch(92.76% 0.0058 264.53deg);
+    --color-grey-1: oklch(97.02% 0 0deg);
+    --color-black: oklch(0% 0 0deg);
+    --color-darkpurple: oklch(27.3% 0.1564 303.20deg);
+    --color-darkpink: oklch(36.4% 0.1802 338.32deg);
+    --color-neonpurple: oklch(48.84% 0.258771 301.3473deg);
+    --color-neonpink: oklch(67.94% 0.2981 337.83deg);
+
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    /* 4px */
+    --spacing-2: 0.5rem;
+    /* 8px */
+    --spacing-3: 0.75rem;
+    /* 12px */
+    --spacing-4: 1rem;
+    /* 16px */
+    --spacing-5: 1.25rem;
+    /* 20px */
+    --spacing-6: 1.5rem;
+    /* 24px */
+    --spacing-7: 1.75rem;
+    /* 28px */
+    --spacing-8: 2rem;
+    /* 32px */
+
+    /* Font spaces */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 2rem;
+    /* 32px */
+    --font-size-4xl: 2.5rem;
+    /* 40px */
+    --font-size-5xl: 3.5rem;
+    /* 56px */
+    --font-size-6xl: 4.5rem;
+    /* 72px */
+
+    /* Font weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Line heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* Border radius */
+    --radius-sm: 0.375rem;
+    /* 6px */
+    --radius-md: 0.5rem;
+    /* 8px */
+    --radius-lg: 1rem;
+    /* 16px */
+    --radius-xl: 1.5rem;
+    /* 24px */
+    --radius-2xl: 2rem;
+    /* 32px */
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-@layer base {
-    body {
-        @apply ;
-    }
+body {
+    @apply font-sans text-base font-normal leading-normal antialiased bg-black text-white;
+}
 
-    h1 {
-        @apply text-5xl leading-tight font-semibold lg:text-6xl;
-    }
+h1 {
+    @apply font-display text-6xl font-normal leading-tight;
+}
 
-    h2 {
-        @apply text-2xl leading-tight lg:text-4xl;
-    }
 
-    h3 {
-        @apply my-4 text-xl leading-tight font-bold;
-    }
+h2 {
+    @apply font-display text-5xl font-normal leading-tight;
+}
+
+
+h3 {
+    @apply font-display text-3xl font-normal leading-tight;
+}
+
+h4 {
+    @apply font-display text-2xl font-normal leading-tight text-white;
+}
+
+h5 {
+    @apply font-display text-2xl font-normal leading-tight;
+}
+
+.text_footer{
+    @apply bg-gradient-to-br from-blue-700 to-fuchsia-600 bg-clip-text text-transparent
+}
+
+a {
+    @apply no-underline transition;
+}
+
+a:hover {
+    @apply text-brandingblue;
 }
 
 @layer components {
     .grille {
-        @apply px-6 lg:grid lg:grid-cols-(--my-grid) lg:justify-center lg:gap-8;
+    @apply px-6 lg:flex lg:flex-row lg:justify-center lg:gap-12;
     }
 }

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<footer>
+    <p
+        class="text_footer text-6xl font-normal font-display text-center space-y-6 mb-5"
+    >
+        FlyTapFest
+    </p>
+    <p class="font-sans text-3xl text-center font-semibold">6-7 juin 2026</p>
+    <address class="font-sans text-base text-right pl-350">
+        <div class="flex items-center gap-2">
+            <img
+                src="/src/assets/icons/lieublanc.svg"
+                alt="Lieu"
+                class="w-5 h-5"
+            />
+            <p>Parc du Près-la-Rose, Montbéliard</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <img
+                src="/src/assets/icons/tel.svg"
+                alt="Téléphone"
+                class="w-5 h-5"
+            />
+            <p>+33 1 23 45 67 89</p>
+        </div>
+        <div class="flex items-center gap-2">
+            <img src="/src/assets/icons/mail.svg" alt="Email" class="w-5 h-5" />
+            <p>contact@flytapfest.fr</p>
+        </div>
+    </address>
+    <div>
+        <p class="pl-20 font-sans 2xl">En partenariat avec</p>
+        <p class="pl-20 font-sans 2xl text-neonpurple">Ville de Montbéliard</p>
+        <Image
+            src="src/assets/img/montbeliard.avif"
+            alt="Logo de la ville de Montbéliard"
+            style="width: 121px; height: 54px; margin-left: 250px"/>
+    </div>
+    <p class="pl-190 text-grey-4">© 2026 FlyTapFest. Tous droits réservés.</p>
+</footer>
