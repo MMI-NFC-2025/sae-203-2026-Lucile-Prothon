@@ -28,17 +28,24 @@ import { Image } from "astro:assets";
             <p>+33 1 23 45 67 89</p>
         </div>
         <div class="flex items-center gap-2">
-            <img src="/src/assets/icons/mail.svg" alt="Email" class="w-5 h-5" />
+            <img src="/src/assets/icons/mail.svg" alt="Email" />
             <p>contact@flytapfest.fr</p>
         </div>
     </address>
     <div>
         <p class="pl-20 font-sans 2xl">En partenariat avec</p>
-        <p class="pl-20 font-sans 2xl text-neonpurple">Ville de Montbéliard</p>
+        <p class="pl-20 font-sans 2xl text-neonpurple mb-4">
+            Ville de Montbéliard
+        </p>
         <Image
             src="src/assets/img/montbeliard.avif"
             alt="Logo de la ville de Montbéliard"
-            style="width: 121px; height: 54px; margin-left: 250px"/>
+            style="width: 121px; height: 54px; margin-left: 80px  "
+        />
+    </div>
+    <div class="flex justify-center gap-4 mt-4 mb-4">
+        <img src="/src/assets/icons/insta.svg" alt="Instagram" />
+        <img src="/src/assets/icons/facebook.svg" alt="Facebook" />
     </div>
     <p class="pl-190 text-grey-4">© 2026 FlyTapFest. Tous droits réservés.</p>
 </footer>
