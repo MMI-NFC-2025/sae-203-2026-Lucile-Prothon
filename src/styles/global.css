@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: oklch(0.8897 0.2112 95.02);
+    /* #1d096b */
+    --color-primary-light: oklch(0.9114 0.0437 80.8);
+    /* #feaa9b */
+
+    --font-sans: "Inter Variable", sans-serif;
+
+    --my-grid: repeat(12, minmax(0, 88px));
+}
+
+@layer base {
+    body {
+        @apply ;
+    }
+
+    h1 {
+        @apply text-5xl leading-tight font-semibold lg:text-6xl;
+    }
+
+    h2 {
+        @apply text-2xl leading-tight lg:text-4xl;
+    }
+
+    h3 {
+        @apply my-4 text-xl leading-tight font-bold;
+    }
+}
+
+@layer components {
+    .grille {
+        @apply px-6 lg:grid lg:grid-cols-(--my-grid) lg:justify-center lg:gap-8;
+    }
+}
