@@ -83,12 +83,12 @@ export async function allArtisteBySceneName(nom) {
 
 // Une fonction qui permet d'ajouter ou modifier les informations d'un artiste ou d'une scène.
 
-export async function saveRecord(collectionName, data) {
-    // collectionName doit être "Artiste" ou "Scene"
-    if (data.id) {
-        return await pb.collection(collectionName).update(data.id, data);
-    } else {
-        return await pb.collection(collectionName).create(data);
+export async function saveData(artisteId, sceneId, newArtiste, newScene) {
+    if (artisteId && sceneId) {
+        await pb.collection('Artiste').update(artisteId, newArtiste);
+        await pb.collection('Scene').update(sceneId, newScene);
+    } else if (!artisteId && !sceneId) {
+        await pb.collection('Artiste').create(newArtiste);
+        await pb.collection('Scene').create(newScene);
     }
 }
-

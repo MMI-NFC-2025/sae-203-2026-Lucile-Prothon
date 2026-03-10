@@ -2,6 +2,4 @@
 - Nom: Prothon
 - Prénom: Lucile
 - url: 
-Pocketbase : https://flytapfest.prothon.fr/_/ 
-Mail : lucileprothon@gmail.com
-MDP : seXmuz-xytfef-puqbi8
+

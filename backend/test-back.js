@@ -1,4 +1,4 @@
-import { Allevents, getArtisteByDate, allScenesSortedByName, allArtisteByOrder, allEventsByArtisteId, allEventsBySceneId, allArtisteBySceneId, allArtisteBySceneName } from '../backend/backend.mjs';
+import { Allevents, getArtisteByDate, allScenesSortedByName, allArtisteByOrder, allEventsByArtisteId, allEventsBySceneId, allArtisteBySceneId, allArtisteBySceneName, saveData } from '../backend/backend.mjs';
 
 /*try {
     const records = await Allevents();
@@ -57,5 +57,23 @@ import { Allevents, getArtisteByDate, allScenesSortedByName, allArtisteByOrder, 
     console.error(e);
 }*/
 
+/*try {
+    const newArtiste = { nom_artiste: 'Artiste Test', description: 'Test', date_representation: '2026-06-07', scene: 'ytc10ylomb4z75i', genre_musical : 'rock'};
+    const newScene = { nom: 'Scène Test', description: 'Test', capacite: '7000', lieu: 'Parc du Près-la-Rose, Montbéliard' };
+    await saveData(null, null, newArtiste, newScene);
+    console.log('Création réussie');
+} catch (e) {
+    console.error('Erreur lors de la création :', e);
+}*/
 
-
+// Test de mise à jour (remplace les IDs par des IDs réels existants)
+/*try {
+    const artisteId = 'ag1koag8muawiet'; // ID d'artiste existant
+    const sceneId = 'ax08dtxwmjqg80s'; // ID de scène existant
+    const updatedArtiste = { nom_artiste: 'Artiste Test 1.1' };
+    const updatedScene = { nom: 'Scène Test 1.1' };
+    await saveData(artisteId, sceneId, updatedArtiste, updatedScene);
+    console.log('Mise à jour réussie');
+} catch (e) {
+    console.error('Erreur lors de la mise à jour :', e);
+}*/
