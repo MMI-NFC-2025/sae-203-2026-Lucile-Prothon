@@ -99,7 +99,7 @@
 }
 
 body {
-    @apply font-sans text-base font-normal leading-normal antialiased bg-black text-white;
+    @apply font-sans text-base font-normal leading-normal antialiased bg-black text-white pl-10;
 }
 
 h1 {
@@ -108,7 +108,7 @@ h1 {
 
 
 h2 {
-    @apply font-display text-5xl font-normal leading-tight;
+    @apply font-sans text-5xl font-semibold leading-tight pl-9;
 }
 
 
@@ -124,7 +124,7 @@ h5 {
     @apply font-display text-2xl font-normal leading-tight;
 }
 
-.text_footer{
+.text_degrede {
     @apply bg-gradient-to-br from-blue-700 to-fuchsia-600 bg-clip-text text-transparent
 }
 

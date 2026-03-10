@@ -1,9 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from"../components/Hero.astro"; 
+import Hero from "../components/Hero.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
 	<Hero />
-	<h3>test</h3>
+	<div class="flex items-center pl-20 mt-5">
+		<h1 class="text_degrede">FlyTapFest</h1>
+		<Image
+			src="src/assets/img/chaussure.avif"
+			alt="Image d'exemple d'un spectacle de drone"
+			style="width: 600px; height: auto; margin-left: auto; margin-right: 0;"
+		/>
+	</div>
+	<h2 class="text-darkblue">Festival de claquettes</h2>
+	<p>
+		Fusion entre claquettes traditionnelles et spectacle de drones lumineux
+	</p>
+	<p>6-7 juin 2026</p>
 </Layout>
