@@ -149,3 +149,9 @@ a {
         @apply px-6 grid grid-cols-2 grid-rows-2 gap-6;
     }
 }
+
+@layer components {
+    .grille3_1 {
+        @apply px-6 grid grid-cols-2 grid-rows-2 gap-3 lg:justify-center;
+    }
+}
