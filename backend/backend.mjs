@@ -92,3 +92,16 @@ export async function saveData(artisteId, sceneId, newArtiste, newScene) {
         await pb.collection('Scene').create(newScene);
     }
 }
+
+export async function getScene() {
+    try {
+        // récupérer tous les agents (liste complète)
+        const data = await db.collection('Scene').getFullList({
+            sort: '-created',
+        });
+        return data;
+    } catch (error) {
+        console.log('Une erreur est survenue en lisant la liste des agents', error);
+        return [];
+    }
+}

@@ -1,0 +1,14 @@
+---
+import { getScenes } from "../../../backend/backend.mjs";
+import Layout from "../../layouts/Layout.astro";
+
+const { id } = Astro.params;
+// utilisation d'un type any pour éviter les erreurs de propriété
+const scenes: any = await getScenes(id);
+---
+
+<Layout titre={scenes.photo}>
+    <p>{scenes.presentation}</p>
+    <h2>{scenes.nom}</h2>
+    <p>{scenes.capacite}</p>
+</Layout>

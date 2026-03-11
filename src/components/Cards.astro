@@ -1,0 +1,31 @@
+---
+const scenes = Astro.props.scenes;
+---
+
+{
+    scenes && (
+        <div
+            class="card"
+            style="background-color: rgb(14, 171, 163); border-radius: 15px; padding: 20px; margin: 70px "
+        >
+            <PbImage record={scenes} recordImage={scenes.image?.[0]} />
+            <h4 style="margin: 20px;">
+                <b>{scenes.nom}</b>
+            </h4>
+            <div class="container">
+                <p>Nom : {scenes.nom}</p>
+                <p>Prénom: {scenes.prenom}</p>
+                <p>Contact: {scenes.email}</p>
+
+                <button style="background-color: rgb(46, 132, 161); border: none; color: rgb(0, 0, 0); text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 7px 2px; cursor: pointer; border-radius: 10%;">
+                    <a
+                        style="font-size: 18px; font-weight: 600;"
+                        href={`/agent/${scenes.id}`}
+                    >
+                        Voir plus
+                    </a>
+                </button>
+            </div>
+        </div>
+    )
+}

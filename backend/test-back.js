@@ -67,7 +67,7 @@ import { Allevents, getArtisteByDate, allScenesSortedByName, allArtisteByOrder, 
 }*/
 
 // Test de mise à jour (remplace les IDs par des IDs réels existants)
-try {
+/*try {
     const artisteId = 'hum30t2d66mydhl'; // ID d'artiste existant
     const sceneId = 'absqn8x9cmemp0j'; // ID de scène existant
     const updatedArtiste = { nom_artiste: 'Artiste Test 1.1' };
@@ -76,4 +76,7 @@ try {
     console.log('Mise à jour réussie');
 } catch (e) {
     console.error('Erreur lors de la mise à jour :', e);
-}
+}*/
+
+
+

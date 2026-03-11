@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import Cards from "../../components/Cards.astro";
+import { getScenes } from "../../../backend/backend.mjs";
+
+// récupérer la liste des scènes au moment du build
+let scenes = await getScenes();
+---
+
+<Layout titre="Scènes">
+    <h1>Scènes</h1>
+    <p class="base text-grey-2 pl-20 mt-5">
+        Découvrez les différentes scènes du festival
+    </p>
+    <div
+        class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-blue-600 bg-gradient-to-r from-[#1B1A3C] to-[#2E0F5B] text-center shadow-md"
+    >
+        <h2 class="text-2xl font-bold text-white mb-2">Plan du festival</h2>
+        <p class="text-gray-400 text-base">
+            Toutes les scènes sont situées dans le Parc du Prés-la-Rose à
+            Montbéliard.
+        </p>
+    </div>
+<div>
+    {
+        scenes.map(scenes => (
+            <div>
+                <!-- Contenu de la scènes -->
+                  <Cards
+                       agent={scenes}
+                    />
+            </div>
+        ))
+    }
+</div>
+</Layout>
