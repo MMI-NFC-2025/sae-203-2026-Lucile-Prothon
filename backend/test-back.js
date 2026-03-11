@@ -67,13 +67,13 @@ import { Allevents, getArtisteByDate, allScenesSortedByName, allArtisteByOrder, 
 }*/
 
 // Test de mise à jour (remplace les IDs par des IDs réels existants)
-/*try {
-    const artisteId = 'ag1koag8muawiet'; // ID d'artiste existant
-    const sceneId = 'ax08dtxwmjqg80s'; // ID de scène existant
+try {
+    const artisteId = 'hum30t2d66mydhl'; // ID d'artiste existant
+    const sceneId = 'absqn8x9cmemp0j'; // ID de scène existant
     const updatedArtiste = { nom_artiste: 'Artiste Test 1.1' };
     const updatedScene = { nom: 'Scène Test 1.1' };
     await saveData(artisteId, sceneId, updatedArtiste, updatedScene);
     console.log('Mise à jour réussie');
 } catch (e) {
     console.error('Erreur lors de la mise à jour :', e);
-}*/
+}

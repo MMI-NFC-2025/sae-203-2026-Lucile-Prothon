@@ -21,10 +21,10 @@ migrate((app) => {
       {
         "autogeneratePattern": "",
         "hidden": false,
-        "id": "text1819170229",
+        "id": "text1770536583",
         "max": 0,
         "min": 0,
-        "name": "nom",
+        "name": "nom_artiste",
         "pattern": "",
         "presentable": false,
         "primaryKey": false,
@@ -48,20 +48,35 @@ migrate((app) => {
       },
       {
         "hidden": false,
-        "id": "geoPoint3218329231",
-        "name": "localisation",
+        "id": "date648974043",
+        "max": "",
+        "min": "",
+        "name": "date_representation",
         "presentable": false,
         "required": false,
         "system": false,
-        "type": "geoPoint"
+        "type": "date"
+      },
+      {
+        "cascadeDelete": false,
+        "collectionId": "pbc_3556671029",
+        "hidden": false,
+        "id": "relation3648647130",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "scene",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
       },
       {
         "hidden": false,
-        "id": "file2517792122",
+        "id": "file1666423489",
         "maxSelect": 1,
         "maxSize": 0,
         "mimeTypes": [],
-        "name": "photot",
+        "name": "gallerie",
         "presentable": false,
         "protected": false,
         "required": false,
@@ -71,15 +86,32 @@ migrate((app) => {
       },
       {
         "hidden": false,
-        "id": "number2716462395",
-        "max": null,
-        "min": null,
-        "name": "capacite",
-        "onlyInt": false,
+        "id": "file1596439714",
+        "maxSelect": 1,
+        "maxSize": 0,
+        "mimeTypes": [],
+        "name": "photo_principale",
+        "presentable": false,
+        "protected": false,
+        "required": false,
+        "system": false,
+        "thumbs": [],
+        "type": "file"
+      },
+      {
+        "hidden": false,
+        "id": "select2638798251",
+        "maxSelect": 1,
+        "name": "genre_musical",
         "presentable": false,
         "required": false,
         "system": false,
-        "type": "number"
+        "type": "select",
+        "values": [
+          "Percussion corporelle",
+          "Rock",
+          "Techno"
+        ]
       },
       {
         "hidden": false,
@@ -102,10 +134,10 @@ migrate((app) => {
         "type": "autodate"
       }
     ],
-    "id": "pbc_3556671029",
+    "id": "pbc_3270079289",
     "indexes": [],
     "listRule": null,
-    "name": "Scene",
+    "name": "Artiste",
     "system": false,
     "type": "base",
     "updateRule": null,
@@ -114,7 +146,7 @@ migrate((app) => {
 
   return app.save(collection);
 }, (app) => {
-  const collection = app.findCollectionByNameOrId("pbc_3556671029");
+  const collection = app.findCollectionByNameOrId("pbc_3270079289");
 
   return app.delete(collection);
 })

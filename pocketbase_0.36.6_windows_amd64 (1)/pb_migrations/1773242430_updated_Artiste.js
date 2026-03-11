@@ -3,20 +3,19 @@ migrate((app) => {
   const collection = app.findCollectionByNameOrId("pbc_3270079289")
 
   // update field
-  collection.fields.addAt(6, new Field({
+  collection.fields.addAt(5, new Field({
     "hidden": false,
-    "id": "select2638798251",
-    "maxSelect": 1,
-    "name": "genre_musical",
+    "id": "file1666423489",
+    "maxSelect": 99,
+    "maxSize": 0,
+    "mimeTypes": [],
+    "name": "gallerie",
     "presentable": false,
+    "protected": false,
     "required": false,
     "system": false,
-    "type": "select",
-    "values": [
-      "tech",
-      "percussion corporelle",
-      "rock"
-    ]
+    "thumbs": [],
+    "type": "file"
   }))
 
   return app.save(collection)
@@ -24,21 +23,19 @@ migrate((app) => {
   const collection = app.findCollectionByNameOrId("pbc_3270079289")
 
   // update field
-  collection.fields.addAt(7, new Field({
+  collection.fields.addAt(5, new Field({
     "hidden": false,
-    "id": "select2638798251",
+    "id": "file1666423489",
     "maxSelect": 1,
-    "name": "genre_musical",
+    "maxSize": 0,
+    "mimeTypes": [],
+    "name": "gallerie",
     "presentable": false,
+    "protected": false,
     "required": false,
     "system": false,
-    "type": "select",
-    "values": [
-      "tech",
-      "percussion corporelle",
-      "rock",
-      "traditionnel"
-    ]
+    "thumbs": [],
+    "type": "file"
   }))
 
   return app.save(collection)

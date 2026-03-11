@@ -21,16 +21,70 @@ migrate((app) => {
       {
         "autogeneratePattern": "",
         "hidden": false,
-        "id": "text1770536583",
+        "id": "text1819170229",
         "max": 0,
         "min": 0,
-        "name": "nom_artiste",
+        "name": "nom",
         "pattern": "",
         "presentable": false,
         "primaryKey": false,
         "required": false,
         "system": false,
         "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text1843675174",
+        "max": 0,
+        "min": 0,
+        "name": "description",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text3218329231",
+        "max": 0,
+        "min": 0,
+        "name": "localisation",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "file347571224",
+        "maxSelect": 1,
+        "maxSize": 0,
+        "mimeTypes": [],
+        "name": "photo",
+        "presentable": false,
+        "protected": false,
+        "required": false,
+        "system": false,
+        "thumbs": [],
+        "type": "file"
+      },
+      {
+        "hidden": false,
+        "id": "number2716462395",
+        "max": null,
+        "min": null,
+        "name": "capacite",
+        "onlyInt": false,
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "number"
       },
       {
         "hidden": false,
@@ -53,10 +107,10 @@ migrate((app) => {
         "type": "autodate"
       }
     ],
-    "id": "pbc_3270079289",
+    "id": "pbc_3556671029",
     "indexes": [],
     "listRule": null,
-    "name": "Artiste",
+    "name": "Scene",
     "system": false,
     "type": "base",
     "updateRule": null,
@@ -65,7 +119,7 @@ migrate((app) => {
 
   return app.save(collection);
 }, (app) => {
-  const collection = app.findCollectionByNameOrId("pbc_3270079289");
+  const collection = app.findCollectionByNameOrId("pbc_3556671029");
 
   return app.delete(collection);
 })
