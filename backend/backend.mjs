@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase('http://127.0.0.1:8090');
+const pb = new PocketBase('https://flytapfest.prothon.fr:443');
 
 export async function Allevents() {
     const records = await pb.collection('Artiste').getFullList();
