@@ -4,5 +4,313 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout titre="Programme">
     <h1>Programme</h1>
-    <p class="base text-grey-2 ">Découvrez tous les spectacles</p>
+    <p class="base text-grey-2 pl-20 mt-5">Découvrez tous les spectacles</p>
+    <div class="flex justify-start items-center mt-4 pl-4">
+        <a
+            href="/404"
+            class="flex gap-2 px-6 py-2 rounded-full bg-[#070B1A] text-neonpurple text-base border border-darkpurple shadow-[0_0_18px_rgba(29,78,216,0.35)] hover:shadow-[0_0_28px_rgba(29,78,216,0.6)] transition mt-4"
+        >
+            <img
+                src="/src/assets/icons/telechargement.svg"
+                class="w-5 h-5"
+                alt="Home"
+            />
+            Télécharger le programme
+        </a>
+    </div>
+    <p class="text-2xl font-semibold mt-10 pl-4">Filtres</p>
+    <div class="grille2">
+        <div class="lg:col-span-3">
+            <p class="font-semibold text-xl text-grey-2 mt-8 pl-5">Jour</p>
+            <div class="flex gap-6 mt-7 pl-8">
+                <p class="filter text-grey-4 cursor-pointer">Tous</p>
+                <p class="filter text-grey-4 cursor-pointer hover:text-white">
+                    6 juin
+                </p>
+                <p class="filter text-grey-4 cursor-pointer hover:text-white">
+                    7 juin
+                </p>
+            </div>
+        </div>
+        <div class="lg:col-span-5">
+            <p class="font-semibold text-xl text-grey-2 mt-8 pl-5">Scène</p>
+            <div class="flex gap-6 mt-7 pl-8">
+                <p class="filter text-grey-4 cursor-pointer">Toutes</p>
+                <p class="filter text-grey-4 cursor-pointer hover:text-white">
+                    Scène principale
+                </p>
+                <p class="filter text-grey-4 cursor-pointer hover:text-white">
+                    Sène Céleste
+                </p>
+                <p class="filter text-grey-4 cursor-pointer hover:text-white">
+                    Sène Innovation
+                </p>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-brandingblue pl-5 mt-15">6 juin 2026</h2>
+    <div class="grille3 mb-16">
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Claquettes Moderne
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                18:00
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">
+                Les Claquettes Volantes
+            </h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Principale
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Spectacle drône
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                19:30
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">
+                Drone Symphony orchestra
+            </h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Céleste
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Fusion
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                21:00
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">TapTechFuion</h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Principale
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Performance
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                22:30
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">
+                LightStepCollection
+            </h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Innovation
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-brandingblue text-3xl pl-5 mt-15">7 juin 2026</h2>
+    <div class="grille3">
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Claquettes Expérimentales
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                17:00
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">
+                Rhytm & Lights
+            </h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Innovation
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Spectacle drône
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                18:30
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">Sky Dancers</h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Céleste
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Street Trap
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                20:00
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">TapTechFuion</h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Scène Principale
+            </div>
+        </div>
+        <div
+            class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-darkblue bg-[#020617] p-6 relative"
+        >
+            <div
+                class="absolute top-0 right-0 bg-brandingblue text-darkblue px-6 py-2 rounded-tr-2xl rounded-bl-xl text-lg font-medium"
+            >
+                Grande Finale
+            </div>
+
+            <div
+                class="flex items-center gap-3 text-magenta text-2xl font-bold"
+            >
+                <img
+                    src="/src/assets/icons/horraire.svg"
+                    class="w-7 h-7"
+                    alt="heure"
+                />
+                21:30
+            </div>
+
+            <h2 class="text-white text-3xl font-semibold mt-2">
+                Final Fusion Show
+            </h2>
+
+            <div class="flex items-center gap-2 text-grey-4 text-lg mt-3">
+                <img
+                    src="src/assets/icons/lieugris.svg"
+                    class="w-6 h-6"
+                    alt="lieu"
+                />
+                Toutes les scènes
+            </div>
+        </div>
+    </div>
 </Layout>

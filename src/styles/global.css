@@ -131,12 +131,21 @@ a {
     @apply no-underline transition;
 }
 
-a:hover {
-    @apply text-brandingblue;
-}
 
 @layer components {
     .grille {
         @apply px-6 lg:grid lg:grid-cols-(--my-grid) lg:justify-center lg:gap-12;
+    }
+}
+
+@layer components {
+    .grille2 {
+        @apply px-6 lg:grid lg:grid-cols-(--my-grid) lg:justify-start lg:gap-10;
+    }
+}
+
+@layer components {
+    .grille3 {
+        @apply px-6 grid grid-cols-2 grid-rows-2 gap-6;
     }
 }
