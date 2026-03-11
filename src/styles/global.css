@@ -8,7 +8,7 @@
     --font-display: "Monoton";
     --font-sans: "Exo Variable", sans-serif;
 
-
+    --my-grid: repeat(12, minmax(0, 70px));
 
     /* Color */
     --color-brandingblue: oklch(45.5% 0.3037 264.12deg);
@@ -102,7 +102,7 @@ body {
 }
 
 h1 {
-    @apply font-sans text-6xl font-normal leading-tight;
+    @apply font-display text-6xl font-normal leading-tight;
 }
 
 
@@ -116,11 +116,11 @@ h3 {
 }
 
 h4 {
-    @apply font-display text-2xl font-normal leading-tight text-white;
+    @apply font-sans text-3xl font-bold leading-tight mt-15;
 }
 
 h5 {
-    @apply font-display text-2xl font-normal leading-tight;
+    @apply font-sans text-3xl font-bold leading-tight mt-15;
 }
 
 .text_degrede {
@@ -135,3 +135,8 @@ a:hover {
     @apply text-brandingblue;
 }
 
+@layer components {
+    .grille {
+        @apply px-6 lg:grid lg:grid-cols-(--my-grid) lg:justify-center lg:gap-12;
+    }
+}
