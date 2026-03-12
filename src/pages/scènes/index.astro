@@ -2,10 +2,10 @@
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
 import Cards from "../../components/Cards.astro";
-import { getScenes } from "../../../backend/backend.mjs";
+import { getScene } from "../../../backend/backend.mjs";
 
 // récupérer la liste des scènes au moment du build
-let scenes = await getScenes();
+const scenes = await getScene();
 ---
 
 <Layout titre="Scènes">
@@ -24,11 +24,11 @@ let scenes = await getScenes();
     </div>
 <div>
     {
-        scenes.map(scenes => (
+        scenes.map((artiste) => (
             <div>
                 <!-- Contenu de la scènes -->
                   <Cards
-                       agent={scenes}
+                       scenes={artiste}
                     />
             </div>
         ))
