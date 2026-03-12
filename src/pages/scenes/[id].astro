@@ -1,14 +1,25 @@
 ---
-import { getScene } from "../../../backend/backend.mjs";
 import Layout from "../../layouts/Layout.astro";
+import { getSceneName } from "../../../backend/backend.mjs";
 
 const { id } = Astro.params;
 // utilisation d'un type any pour éviter les erreurs de propriété
-const scenes: any = await getScene(id);
+const scenes: any = await getSceneName(id);
 ---
 
-<Layout titre={scenes.photo}>
-    <p>{scenes.presentation}</p>
-    <h2>{scenes.nom}</h2>
-    <p>{scenes.capacite}</p>
+<Layout titre={scenes.nom}>
+    <div
+        class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-brandingblue  text-center shadow-md"
+    >
+        <h1>{scenes.nom}</h1>
+        <p>
+            <img
+                src="src/assets/icons/lieurose.svg"
+                class="w-5 h-5"
+                alt="Icône lieu"
+            />Capacité : {scenes.capacite}
+        </p>
+        <p>{scenes.presentation}</p>
+        <p>{scenes.description}</p>
+    </div>
 </Layout>

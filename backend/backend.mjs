@@ -2,9 +2,14 @@ import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('https://flytapfest.prothon.fr');
 
-export async function Allevents() {
+export async function AllArtiste() {
     const records = await pb.collection('Artiste').getFullList();
     return records;
+}
+
+export async function allScenes() {
+    const scenes = await pb.collection('Scene').getFullList();
+    return scenes;
 }
 
 //Une fonction qui retourne la liste de tous les artistes triés par date de représentation.
@@ -93,19 +98,30 @@ export async function saveData(artisteId, sceneId, newArtiste, newScene) {
     }
 }
 
-export async function getScene() {
-    try {
-        // récupérer tous les agents (liste complète)
-        const data = await pb.collection('Scene').getFullList({
-            sort: '-created',
-        });
-        return data;
-    } catch (error) {
-        console.log('Une erreur est survenue en lisant la liste des agents', error);
-        return [];
-    }
-}
 
 export function getFileURL(record, field, thumb) {
     return field ? pb.files.getURL(record, field, { thumb }) : null;
 }
+
+const options = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+    timeZone: "Europe/Paris",
+};
+
+const formatter = new Intl.DateTimeFormat("fr-FR", options);
+
+export function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    const formattedDate = formatter.format(date);
+
+    return formattedDate;
+}
+
+
+

@@ -11,18 +11,19 @@ const VALID_LAYOUTS = ["constrained", "full-width", "fixed", "none"];
 // Vérifie que le layout est valide, sinon utilise "constrained" par défaut
 const resolvedLayout = VALID_LAYOUTS.includes(layout) ? layout : "constrained";
 const imageUrl = record && field ? getFileURL(record, field, thumb) : null;
+console.log(imageUrl);
 ---
 
 {
     imageUrl && (
-        <ImagePB
+        <Picture
             pictureAttributes={{ class: classPicture }}
             class={classImg}
-            inferSize={true}
+            width="200"
+            height="200"
             layout={resolvedLayout}
-            formats={["avif", "webp"]}
             src={imageUrl}
-            alt={alt || ""}
+            alt={alt || "photo"}
         />
     )
 }

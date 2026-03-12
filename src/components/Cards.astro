@@ -1,25 +1,28 @@
 ---
 import ImagePB from "../components/ImagePB.astro";
-import { getFileURL } from "../../backend/backend.mjs";
 const scene = Astro.props;
 ---
 
-{
-    scene && (
-        <div class="card rounded-xl p-5 mt-7 border-2 border-brandingblue">
+<div class="card rounded-xl p-5 mt-7 border-2 border-brandingblue">
+    {
+        scene && (
             <div class="container">
                 <ImagePB
                     record={scene}
-                    recordImage={scene?.image?.[0] || scene?.photo || ""}
-                    width={400}
-                    height={300}
+                    field={scene.photo}
                 />
 
-                <p>{scene.description}</p>
-                <p>{scene.nom}</p>
-                <p>{scene.capacite}</p>
-                <p>{JSON.stringify(scene)}</p>
+                <p class="text-grey-2">{scene.description}</p>
+                <p class="text-2xl font-semibold">{scene.nom}</p>
+                <p class="flex items-center gap-2 text-grey-2">
+                    <img
+                        src="src/assets/icons/lieurose.svg"
+                        class="w-5 h-5"
+                        alt="Icône lieu"
+                    />
+                    {scene.capacite}
+                </p>
             </div>
-        </div>
-    )
-}
+        )
+    }
+</div>
