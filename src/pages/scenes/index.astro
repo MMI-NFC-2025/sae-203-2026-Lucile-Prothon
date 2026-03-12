@@ -6,6 +6,7 @@ import { getScene } from "../../../backend/backend.mjs";
 
 // récupérer la liste des scènes au moment du build
 const scenes = await getScene();
+console.log(scenes);
 ---
 
 <Layout titre="Scènes">
@@ -24,13 +25,8 @@ const scenes = await getScene();
     </div>
 <div>
     {
-        scenes.map((artiste) => (
-            <div>
-                <!-- Contenu de la scènes -->
-                  <Cards
-                       scenes={artiste}
-                    />
-            </div>
+        scenes.map((scene) => (
+            <Cards {...scene}/>
         ))
     }
 </div>

@@ -1,30 +1,24 @@
 ---
-const scenes = Astro.props.scenes;
+import ImagePB from "../components/ImagePB.astro";
+import { getFileURL } from "../../backend/backend.mjs";
+const scene = Astro.props;
 ---
 
 {
-    scenes && (
-        <div
-            class="card"
-            style="background-color: rgb(14, 171, 163); border-radius: 15px; padding: 20px; margin: 70px "
-        >
-            <PbImage record={scenes} recordImage={scenes.image?.[0]} />
-            <h4 style="margin: 20px;">
-                <b>{scenes.nom}</b>
-            </h4>
+    scene && (
+        <div class="card rounded-xl p-5 mt-7 border-2 border-brandingblue">
             <div class="container">
-                <p>Nom : {scenes.nom}</p>
-                <p>Prénom: {scenes.prenom}</p>
-                <p>Contact: {scenes.email}</p>
+                <ImagePB
+                    record={scene}
+                    recordImage={scene?.image?.[0] || scene?.photo || ""}
+                    width={400}
+                    height={300}
+                />
 
-                <button style="background-color: rgb(46, 132, 161); border: none; color: rgb(0, 0, 0); text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 7px 2px; cursor: pointer; border-radius: 10%;">
-                    <a
-                        style="font-size: 18px; font-weight: 600;"
-                        href={`/agent/${scenes.id}`}
-                    >
-                        Voir plus
-                    </a>
-                </button>
+                <p>{scene.description}</p>
+                <p>{scene.nom}</p>
+                <p>{scene.capacite}</p>
+                <p>{JSON.stringify(scene)}</p>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 
-const pb = new PocketBase('https://flytapfest.prothon.fr:443');
+const pb = new PocketBase('https://flytapfest.prothon.fr');
 
 export async function Allevents() {
     const records = await pb.collection('Artiste').getFullList();
@@ -96,7 +96,7 @@ export async function saveData(artisteId, sceneId, newArtiste, newScene) {
 export async function getScene() {
     try {
         // récupérer tous les agents (liste complète)
-        const data = await db.collection('Scene').getFullList({
+        const data = await pb.collection('Scene').getFullList({
             sort: '-created',
         });
         return data;
@@ -104,4 +104,8 @@ export async function getScene() {
         console.log('Une erreur est survenue en lisant la liste des agents', error);
         return [];
     }
+}
+
+export function getFileURL(record, field, thumb) {
+    return field ? pb.files.getURL(record, field, { thumb }) : null;
 }
