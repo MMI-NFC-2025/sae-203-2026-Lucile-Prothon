@@ -4,4 +4,140 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Contact">
     <h1>Contact</h1>
+    <p class="base text-grey-2 pl-20 mt-5">Une question ? Contactez nous</p>
+    <h2>Nos coordonnées</h2>
+    <div
+        class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-brandingblue bg-[#020617] p-6 relative"
+    >
+        <div>
+            <img
+                src="/src/assets/icons/mailbleu.svg"
+                class="w-7 h-7"
+                alt="mail"
+            />
+        </div>
+
+        <p class="text-grey-3 text-3xl font-semibold mt-2">Email</p>
+
+        <div class="flex items-center gap-2 text-grey-4 text-lg mt-3 font-bold">
+            contact@flytapfest.fr
+        </div>
+    </div>
+    <div
+        class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-magenta bg-[#020617] p-6 relative"
+    >
+        <div>
+            <img
+                src="/src/assets/icons/telrose.svg"
+                class="w-7 h-7"
+                alt="téléphone"
+            />
+        </div>
+
+        <p class="text-grey-3 text-3xl font-semibold mt-2">Téléphone</p>
+
+        <div class="flex items-center gap-2 text-grey-4 text-lg mt-3 font-bold">
+            +33 1 23 45 67 89
+        </div>
+    </div>
+    <div
+        class="pl-5 mt-5 w-full max-w-3xl rounded-2xl border border-neonpurple bg-[#020617] p-6 relative"
+    >
+        <div>
+            <img
+                src="/src/assets/icons/lieuviolet.svg"
+                class="w-7 h-7"
+                alt="lieu"
+            />
+        </div>
+
+        <p class="text-grey-3 text-3xl font-semibold mt-2">
+            Parc du Près-la-Rose
+        </p>
+
+        <div class="flex items-center gap-2 text-grey-4 text-lg mt-3 font-bold">
+            25200 Montbéliard
+        </div>
+    </div>
+    <h2 class="pl-20 mt-5">Formulaire de contact</h2>
+    <form class="w-full rounded-2xl p-8 md:p-1O">
+        <div class="space-y-7 max-w-2xl">
+            <div>
+                <label
+                    for="name"
+                    class="block text-grey-2 text-base font-medium mb-2 tracking-wide"
+                >
+                    Nom *
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Votre nom"
+                    class="w-full px-5 py-4 bg-black border-2 border-darkpurple rounded-xl text-white placeholder-grey-2/70 focus:outline-none"
+                />
+            </div>
+            <div>
+                <label
+                    for="email"
+                    class="block text-grey-2 text-base font-medium mb-2 tracking-wide"
+                >
+                    Email *
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="votre@email.com"
+                    class="w-full px-5 py-4 bg-black border-2 border-darkpurple rounded-xl text-white placeholder-grey-2/70 focus:outline-none"
+                />
+            </div>
+            <div>
+                <label
+                    for="subject"
+                    class="block text-grey-2 text-base font-medium mb-2 tracking-wide"
+                >
+                    Sujet *
+                </label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    class="w-full px-5 py-4 bg-black border-2 border-darkpurple rounded-xl text-white placeholder-grey-2/70 focus:outline-none"
+                />
+            </div>
+            <div>
+                <label
+                    for="message"
+                    class="block text-grey-2 text-base font-medium mb-2 tracking-wide"
+                >
+                    Message *
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Votre message..."
+                    class="w-full px-5 py-4 bg-black border-2 border-darkpurple rounded-xl text-white placeholder-grey-2/70 focus:outline-none"
+                ></textarea>
+            </div>
+            <div class="pt-4">
+                <button
+                    type="submit"
+                    class="group w-full flex items-center justify-center gap-3 px-6 py-4 bg-black border-2 border-darkpurple rounded-xl text-white text-lg font-medium focus:outline-none hover:bg-purple-950/30 transition-colors duration-200"
+                >
+                    <img
+                        src="/src/assets/icons/envoi.svg"
+                        alt="Envoyer"
+                        class="w-5 h-5"
+                    />
+                    Envoyer le message
+                </button>
+            </div>
+        </div>
+    </form>
 </Layout>
