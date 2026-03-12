@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { AllArtiste } from "../../../backend/backend.mjs";
 import { formatDate } from "../../../backend/backend.mjs";
-import LieuBleu from "../assets/icons/lieubleu.svg";
+import LieuBlanc from "../../assets/icons/lieublanc.svg";
 
 const { id } = Astro.params;
 // utilisation d'un type any pour éviter les erreurs de propriété
@@ -17,7 +17,7 @@ const artiste: any = await AllArtiste();
     >
         <h1>{artiste.nom}</h1>
         <p>
-            <LieuBleu class="w-5 h-5" alt="Icône lieu" />{
+            <LieuBlanc class="w-5 h-5" alt="Icône lieu" />{
                 artiste.date_representation
             }
         </p>
