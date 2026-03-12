@@ -1,15 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getSceneName } from "../../../backend/backend.mjs";
+import { allScenes } from "../../../backend/backend.mjs";
 
 const { id } = Astro.params;
 // utilisation d'un type any pour éviter les erreurs de propriété
-const scenes: any = await getSceneName(id);
+const scenes: any = await allScenes();
 ---
 
 <Layout titre={scenes.nom}>
     <div
-        class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-brandingblue  text-center shadow-md"
+        class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-brandingblue text-center shadow-md"
     >
         <h1>{scenes.nom}</h1>
         <p>

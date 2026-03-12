@@ -1,28 +1,28 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { getArtisteName } from "../../../backend/backend.mjs";
-import {formatDate} from "../../../backend/backend.mjs";
+import { AllArtiste } from "../../../backend/backend.mjs";
+import { formatDate } from "../../../backend/backend.mjs";
 
 const { id } = Astro.params;
 // utilisation d'un type any pour éviter les erreurs de propriété
-const artiste: any = await getArtisteName(id);
+const artiste: any = await AllArtiste();
 //console.log(id);
 ---
 
 <Layout titre={artiste.nom}>
     <a href={`/artiste/${artiste.id}`}></a>
-        <div
-            class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-brandingblue text-center shadow-md"
-        >
-            <h1>{artiste.nom}</h1>
-            <p>
-                <img
-                    src="src/assets/icons/lieubleu.svg"
-                    class="w-5 h-5"
-                    alt="Icône lieu"
-                />{artiste.date_representation}</p>
-            <p>{artiste.presentation}</p>
-            <p>{artiste.description}</p>
-        </div>
-    </a>
+    <div
+        class="pl-20 mt-10 w-full max-w-4xl mx-auto p-6 rounded-xl border border-brandingblue text-center shadow-md"
+    >
+        <h1>{artiste.nom}</h1>
+        <p>
+            <img
+                src="src/assets/icons/lieubleu.svg"
+                class="w-5 h-5"
+                alt="Icône lieu"
+            />{artiste.date_representation}
+        </p>
+        <p>{artiste.presentation}</p>
+        <p>{artiste.description}</p>
+    </div>
 </Layout>

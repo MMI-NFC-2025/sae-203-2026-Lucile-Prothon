@@ -1,0 +1,25 @@
+---
+import ImagePB from "../components/ImagePB.astro";
+const artiste = Astro.props;
+---
+
+<div class="card rounded-xl p-5 mt-7 border-2 border-brandingblue">
+    {
+        artiste && (
+            <div class="container">
+                <ImagePB record={artiste} field={artiste.photo} />
+
+                <p class="text-grey-2">{artiste.description}</p>
+                <p class="text-2xl font-semibold">{artiste.nom}</p>
+                <p class="flex items-center gap-2 text-grey-2">
+                    <img
+                        src="src/assets/icons/lieurose.svg"
+                        class="w-5 h-5"
+                        alt="Icône lieu"
+                    />
+                    {artiste.scene}
+                </p>
+            </div>
+        )
+    }
+</div>
