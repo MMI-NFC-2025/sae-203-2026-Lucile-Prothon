@@ -1,5 +1,6 @@
 ---
 import ImagePB from "../components/ImagePB.astro";
+import LieuBlanc from "../assets/icons/lieublanc.svg";
 const scene = Astro.props;
 ---
 
@@ -7,19 +8,13 @@ const scene = Astro.props;
     {
         scene && (
             <div class="container">
-                <ImagePB
-                    record={scene}
-                    field={scene.photo}
-                />
+                <ImagePB record={scene} field={scene.photo} />
 
                 <p class="text-grey-2">{scene.description}</p>
                 <p class="text-2xl font-semibold">{scene.nom}</p>
                 <p class="flex items-center gap-2 text-grey-2">
-                    <img
-                        src="src/assets/icons/lieurose.svg"
-                        class="w-5 h-5"
-                        alt="Icône lieu"
-                    />
+                    <ImagePB>
+                       <LieuBlanc />
                     {scene.capacite}
                 </p>
             </div>

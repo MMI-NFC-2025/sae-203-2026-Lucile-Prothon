@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { allScenes } from "../../../backend/backend.mjs";
+import LieuBlanc from "../assets/icons/lieublanc.svg";
 
 const { id } = Astro.params;
 // utilisation d'un type any pour éviter les erreurs de propriété
@@ -13,13 +14,11 @@ const scenes: any = await allScenes();
     >
         <h1>{scenes.nom}</h1>
         <p>
-            <img
-                src="src/assets/icons/lieurose.svg"
-                class="w-5 h-5"
-                alt="Icône lieu"
-            />Capacité : {scenes.capacite}
+            <LieuBlanc class="w-5 h-5" alt="Icône lieu " Capacité />{
+                scenes.capacite
+            }
+            <p>{scenes.presentation}</p>
+            <p>{scenes.description}</p>
         </p>
-        <p>{scenes.presentation}</p>
-        <p>{scenes.description}</p>
     </div>
 </Layout>

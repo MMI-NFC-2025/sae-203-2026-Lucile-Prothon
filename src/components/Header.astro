@@ -1,24 +1,55 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import Logo from "../assets/icons/logo.svg";
 ---
 
 <header class="bg-black">
     <div class="flex items-center justify-between py-4 px-2">
-       <a href="/">
-        <Image
-            src="src/assets/icons/logo.svg"
-            alt="Logo de FlyTapFest"
-            style="width: 150px; height: 50px"
-        />
-        <nav><ul class="flex space-x-4">
-            <li><a href="/" class="text-white hover:text-neonpurple">Accueil</a></li>
-            <li><a href="/festival" class="text-white hover:text-neonpurple">Le festival</a></li>
-            <li><a href="/programme" class="text-white hover:text-neonpurple">Programme</a></li>
-            <li><a href="/artiste" class="text-white hover:text-neonpurple">Artistes</a></li>
-            <li><a href="/scenes" class="text-white hover:text-neonpurple">Scènes</a></li>
-            <li><a href="/info-pratiques" class="text-white hover:text-neonpurple">Info pratiques</a></li>
-            <li><a href="/contact" class="text-white hover:text-neonpurple">Contact</a></li>
-        </ul></nav>
+        <a href="/">
+            <Logo alt="Logo de FlyTapFest" style="width: 150px; height: 50px" />
+            <nav>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="/" class="text-white hover:text-neonpurple"
+                            >Accueil</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/festival"
+                            class="text-white hover:text-neonpurple"
+                            >Le festival</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/programme"
+                            class="text-white hover:text-neonpurple"
+                            >Programme</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/artiste"
+                            class="text-white hover:text-neonpurple"
+                            >Artistes</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/scenes"
+                            class="text-white hover:text-neonpurple">Scènes</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/info-pratiques"
+                            class="text-white hover:text-neonpurple"
+                            >Info pratiques</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/contact"
+                            class="text-white hover:text-neonpurple">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
     </div>
 </header>
